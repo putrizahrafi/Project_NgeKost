@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class ProductsController extends Controller
 {
@@ -14,7 +16,7 @@ class ProductsController extends Controller
 
     public function cart()
     {
-        return view('cart');
+        return view('user.cart');
     }
 
     public function addToCart($id)
@@ -35,7 +37,9 @@ class ProductsController extends Controller
         }
 
         session()->put('cart', $cart);
-        return redirect()->back()->with('success', 'Product add to cart successfully!');
+        Alert::success('Added Successfully', 'Product add to cart Successfully.');
+        return redirect()->route('products');
+        // return redirect()->back()->with('success', 'Product add to cart successfully!');
     }
 
     public function remove(Request $request)
@@ -46,7 +50,8 @@ class ProductsController extends Controller
                 unset($cart[$request->id]);
                 session()->put('cart', $cart);
             }
-            session()->flash('success', 'Product successfully removed!');
+            // session()->flash('success', 'Product successfully removed!');
+            Alert::success('Remove Successfully', 'Product successfully removed!');
         }
     }
 
@@ -56,7 +61,8 @@ class ProductsController extends Controller
             $cart = session()->get('cart');
             $cart[$request->id]["quantity"] = $request->quantity;
             session()->put('cart', $cart);
-            session()->flash('success', 'Cart successfully updated!');
+            // session()->flash('success', 'Cart successfully updated!');
+            Alert::success('Changed Successfully', 'Cart Succesfully Updated!');
         }
     }
 }

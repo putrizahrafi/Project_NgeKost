@@ -40,7 +40,7 @@ class StripeController extends Controller
             'metadata' => [
                 'user_id' => "0001"
             ],
-            'customer_email' => "puputzahrafi@gmail.com", //user->email
+            // 'customer_email' => " ", //user->email
             'success_url' => route('success'),
             "cancel_url" => route('cancel'),
         ]);
@@ -50,7 +50,7 @@ class StripeController extends Controller
 
     public function success()
     {
-        return "Thanks for you order. You have just completed your payment. The seeler will reach out to you as soon as possible";
+        return view ("success");
     }
 
     public function cancel()

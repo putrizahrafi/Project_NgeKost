@@ -44,7 +44,7 @@
         <tr>
             <td colspan="5" style="text-align:right;">
                 <form action="/session" method="POST">
-                    <a href="{{ url('/') }}" class="btn btn-danger"><i class="fa fa-arrow-left"></i> Continue Shopping </a>
+                    <a href="{{ route('products') }}" class="btn btn-danger"><i class="fa fa-arrow-left"></i> Continue Shopping </a>
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                     <button class="btn btn-success" type="submit" id="checkout-live-button"><i class="fa fa-money"></i> Checkout </button>
                 </form>
