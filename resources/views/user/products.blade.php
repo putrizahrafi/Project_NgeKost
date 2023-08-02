@@ -12,7 +12,7 @@
                     <p>{{ $product->product_description }}</p>
                     <p><strong>Price: </strong> {{ $product->price }} </p>
                     <p class="btn-holder"><a href="{{ route('add_to_cart', $product->id) }}" class="btn btn-primary btn-block text-center" role="button"> Add to Cart </a></p>
-                    <p class="btn-holder"><a href="{{ route('add_to_cart', $product->id) }}" class="btn btn-dark btn-block text-center" role="button"> Kost Details </a></p>
+                    {{-- <p class="btn-holder"><a href="{{ route('add_to_cart', $product->id) }}" class="btn btn-dark btn-block text-center" role="button"> Kost Details </a></p> --}}
                 </div>
             </div>
         </div>
