@@ -18,7 +18,19 @@ class ProductsSeeder extends Seeder
                 'product_name' => 'Kost Deluxe Type A',
                 'product_description' => 'Kamar mandi dalam, wifi, meja kerja, lemari, kasur single bed',
                 'photo'=> '1.jpeg',
-                'price' => '1.000.000',
+                'price' => '1000000',
+            ],
+            [
+                'product_name' => 'Kost Deluce Type B',
+                'product_description' => 'Kamar mandi luar, wifi, meja kerja, lemari, kasur single bed',
+                'photo'=> '2.jpeg',
+                'price' => '850000',
+            ],
+            [
+                'product_name' => 'Kost Behive Type C',
+                'product_description' => 'Kamar mandi luar, wifi, meja kerja, lemari, kasur single bed',
+                'photo'=> '3.jpeg',
+                'price' => '650000',
             ],
         ]);
     }
